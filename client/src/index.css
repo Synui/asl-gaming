@@ -4,27 +4,48 @@
 
 html,
 body {
-  min-height: 100%;
+  height: 100%;
 }
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #e787a2;
-  font-weight: 400;
+  background-color: #4c1624;
+  background-image: url(./assets/pink-temple-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
 }
 
 ul li a {
   text-decoration: none;
-  color: #4c1624;
+  color: white;
   font-size: 22px;
 }
 
 ul li {
   list-style: none;
+}
+
+label {
+  color: white;
+  font-size: 25px;
+}
+
+input[type=username],
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 20px;
+  border-radius: 5px;
 }
 
 /* Homepage */
@@ -37,7 +58,9 @@ ul li {
 } */
 
 .start-button,
-.practice-button {
+.practice-button,
+.signup-submit,
+.login-submit {
   background-color: #ca4769;
   padding: 20px;
   text-align: center;
@@ -47,28 +70,67 @@ ul li {
   display: block;
   margin: auto;
   font-size: 25px;
-  border-radius: 5%;
+  border-radius: 5px;
   align-items: center;
   color: white;
   width: 70%;
+  text-decoration: none;
 }
 
 .start-button {
   margin-bottom: 20px;
 }
 
+.start-button {
+  text-decoration: none;
+}
+
 /* Nav */
 .nav-flex {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
 }
 
 .nav-space {
   margin: 5px 15px;
 }
 
-.nav-pad {
+.nav-start {
+  justify-content: start;
+}
+
+.nav-end {
   justify-content: end;
+}
+
+.back-to-menu {
+  color: white;
+  justify-content: flex-start;
+}
+
+/* Signup and Login */
+.signup-container,
+.login-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 10px auto;
+}
+
+.input-style {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.signup-submit-padding,
+.login-submit-padding {
+  padding-top: 15px;
+}
+
+.error-text {
+  color: white;
 }
 
 /* Memory Game */
@@ -77,16 +139,18 @@ h1 {
   font-size: 50px;
   margin-bottom: 40px;
   margin-top: 40px;
-  color: #4c1624;
+  color: white;
 }
 
 .container {
-  height: 700px;
-  width: 900px;
+  height: 650px;
+  width: 800px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1em;
+  margin: auto;
+  margin-top: 5px;
 }
 
 .card {
@@ -155,6 +219,11 @@ h1 {
     height: 550px;
     width: 650px;
   }
+
+  .card {
+    height: 175px;
+    width: 175px;
+  }
 }
 
 @media screen and (max-width: 796px) {
@@ -171,11 +240,16 @@ h1 {
     width: 80px;
     height: 120px;
   }
+
+  .card {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 @media screen and (max-width: 481px) {
   .container {
-    height: 450px;
+    height: 400px;
     width: 330px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -186,6 +260,11 @@ h1 {
   .card img {
     width: 80px;
     height: 120px;
+  }
+
+  .card {
+    height: 100px;
+    width: 100px;
   }
   
 }

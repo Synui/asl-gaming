@@ -37,10 +37,15 @@ function Nav() {
   }
 
   return (
-    <header className="nav-flex nav-pad">
+    <header>
+      <div className="nav-flex nav-start">
+      <Link to="/" className='back-to-menu'>← Back to Menu</Link>
+      </div>
+      <div className="nav-flex nav-end">
       <nav>
         {showNavigation()}
       </nav>
+      </div>
     </header>
   );
 }
