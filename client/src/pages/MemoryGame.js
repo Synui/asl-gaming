@@ -15,10 +15,6 @@ const MemoryGame = () => {
     { id: 5, img: '/img/numbers/number-5.png', stat : "" },
     { id: 6, img: '/img/numbers/asl-number-6.png', stat : "" },
     { id: 6, img: '/img/numbers/number-6.png', stat : "" },
-    // { id: 7, img: '/img/asl-number-7.png', stat: "" },
-    // { id: 7, img: '/img/number-7.png', stat: "" },
-    // { id: 8, img: '/img/asl-number-8.png', stat: "" },
-    // { id: 8, img: '/img/number-8.png', stat: "" },
   ].sort(() => Math.random() - 0.5))
 
 const [prev, setPrev] = useState(-1)
