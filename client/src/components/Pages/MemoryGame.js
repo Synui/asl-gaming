@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import Card from '../../Card';
-import './style.css'
+import Card from '../Card';
 
-function Cards(){
+const MemoryGame = () => {
   const [signs, setsigns] = useState([
     { id: 1, img: '/img/asl-number-1.png', stat : "" },
     { id: 1, img: '/img/number-1.png', stat : "" },
@@ -56,10 +55,15 @@ const [prev, setPrev] = useState(-1)
     return (
         <div className="container">
             { signs.map((sign, index) => (
-                <Card key={index} sign={sign} id={index} handleClick={handleClick} />
+                <Card 
+                key={index} 
+                sign={sign} 
+                id={index} 
+                handleClick={handleClick} 
+                />
             )) }
         </div>
     )
 }
 
-export default Cards;
+export default MemoryGame;
