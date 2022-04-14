@@ -1,3 +1,5 @@
+import React from "react";
+
 function Card({sign, id, handleClick}){
     const signClass = sign.stat ? " active " + sign.stat : ""
 
