@@ -1,7 +1,7 @@
 import React from 'react';
 import Cards from './components/Pages/MemoryGame.js'
 import Homepage from './components/Pages/Homepage.js'
-import Nav from './components/Nav'
+import Nav from './components/Nav/index'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import {
 //   ApolloClient,
